@@ -29,15 +29,17 @@ ViewController
 ---
 ### App thinning에 대해서 설명하시오.
 
-사용자가 다운로드 하는 앱의 용량을 최적화하는 기술입니다.
+사용자가 다운로드 하는 앱의 용량을 최적화하는 기술입니다.<br/>
 크게 App slicing, Bitcode, On-Demand-Resource(ODR) 3가지로 나뉘며 
 
-App Slicing은 각 디바이스에 맞는 이미지 및 리소스를 다운로드 할 수 있는 기술입니다. iOS 9 버전 이전은 사용불가능하며 각 디바이스별로 번들을 만들기 위해 Bitcode를 켜주어야 합니다.
+**App Slicing**은 각 디바이스에 맞는 이미지 및 리소스를 다운로드 할 수 있는 기술입니다. iOS 9 버전 이전은 사용불가능하며 각 디바이스별로 번들을 만들기 위해 Bitcode를 켜주어야 합니다.<br/>
 Bitcode와의 차이점은 App Slicing은 최적화된 이미지 및 리소스, Bitcode는 최적화된 코드라는 점입니다.
 
-Bitcode는 Appstore에 제출할 때 바이너리 코드보다 좀 더 추상화 된 단계의 코드를 제출해서 디바이스의 특성, 호환에 맞게 애플에서 알아서 코드를 바꿔주는 역할을 합니다. iOS 9 버전 이전은 사용불가능하며 프로젝트 파일의 build setting에서 설정해주면 자동으로 사용할 수 있습니다.
+**Bitcode**는 Appstore에 제출할 때 바이너리 코드보다 좀 더 추상화 된 단계의 코드를 제출해서 디바이스의 특성, 호환에 맞게 애플에서 알아서 코드를 바꿔주는 역할을 합니다. <br/>
+iOS 9 버전 이전은 사용불가능하며 프로젝트 파일의 build setting에서 설정해주면 자동으로 사용할 수 있습니다.
 
-ODR은 사용자가 데이터를 필요로 할 때 다운로드 해서 사용할 수 있는 기술 입니다. 프로젝트 파일에서 세팅해주고 Asset의 resource tag를 지정해 준 후 NSBundleResourceRequest 클래스를 사용해서 애플의 서버로 부터 다운로드 해서 사용합니다.
+**On-Demand-Resource**(ODR)은 사용자가 데이터를 필요로 할 때 다운로드 해서 사용할 수 있는 기술 입니다.<br/>
+프로젝트 파일에서 세팅해주고 Asset의 resource tag를 지정해 준 후 NSBundleResourceRequest 클래스를 사용해서 애플의 서버로 부터 다운로드 해서 사용합니다.
 
 
 ---
